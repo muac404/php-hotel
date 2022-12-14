@@ -1,0 +1,14 @@
+header {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+header img {
+  max-height: 150px;
+  margin-right: 5px;
+}
+
+li {
+  list-style: none;
+}

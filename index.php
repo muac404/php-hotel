@@ -41,6 +41,8 @@ $hotels = [
 
 ];
 
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -49,19 +51,31 @@ $hotels = [
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PHP Hotel</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <ul>
-      <?php for ($i = 0; $i < count($hotels); $i++ ){?>
-      <li>
-        <h2> <?php echo $hotels[$i]["name"] ?></h2>
-        <h4><?php echo $hotels[$i]["description"] ?></h4>
-        <h4>With Parking: <?php echo $hotels[$i]["parking"] ?></h4>
-        <h2>Vote:<?php echo $hotels[$i]["vote"] ?></h2>
-        <h4>Distance to center: <?php echo $hotels[$i]["distance_to_center"] ?> km</h4>
-      </li>
-      <?php } ?>
+    <header>
+    
+      <img class="header-img text-center" src="https://loghi-famosi.com/wp-content/uploads/2021/08/Booking.com-Logo.png" alt="logo">
+      <h1 class="text-center mt-5">RIVIERA HOTELS</h1>
+    </header>
 
-    </ul>
+    <div class="container">
+        <ul class="d-flex justify-content-start flex-wrap">
+          <?php for ($i = 0; $i < count($hotels); $i++ ){?>
+          <li class="m-5 p-3">
+            <h2> <?php echo $hotels[$i]["name"] ?></h2>
+            <h4><?php echo $hotels[$i]["description"] ?></h4>
+            <h4>With Parking: <?php echo $hotels[$i]["parking"] ?></h4>
+            <h2>Vote: <?php echo $hotels[$i]["vote"] ?></h2>
+            <h4>Distance to center: <?php echo $hotels[$i]["distance_to_center"] ?> km</h4>
+          </li>
+          <?php } ?>
+
+        </ul>
+
+    </div>
   </body>
 </html>
