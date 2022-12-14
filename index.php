@@ -43,6 +43,8 @@ $hotels = [
 
 
 
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -64,7 +66,12 @@ $hotels = [
 
     <div class="container">
         <ul class="d-flex justify-content-start flex-wrap">
-          <?php for ($i = 0; $i < count($hotels); $i++ ){?>
+          <?php for ($i = 0; $i < count($hotels); $i++ ){
+            if($hotels[$i]["parking"] == "true"){
+              $hotels[$i]["parking"] = "Yes";
+            }else{
+              $hotels[$i]["parking"] = "No";;
+            }?>
           <li class="m-5 p-3">
             <h2> <?php echo $hotels[$i]["name"] ?></h2>
             <h4><?php echo $hotels[$i]["description"] ?></h4>
