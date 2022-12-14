@@ -52,14 +52,16 @@ $hotels = [
   </head>
   <body>
     <ul>
-      
+      <?php for ($i = 0; $i < count($hotels); $i++ ){?>
       <li>
-        <h2>Nome Hotel</h2>
-        <h4>Descrizione</h4>
-        <h4>With Parking:</h4>
-        <h2>Vote:</h2>
-        <h4>Distance to center:</h4>
+        <h2> <?php echo $hotels[$i]["name"] ?></h2>
+        <h4><?php echo $hotels[$i]["description"] ?></h4>
+        <h4>With Parking: <?php echo $hotels[$i]["parking"] ?></h4>
+        <h2>Vote:<?php echo $hotels[$i]["vote"] ?></h2>
+        <h4>Distance to center: <?php echo $hotels[$i]["distance_to_center"] ?> km</h4>
       </li>
+      <?php } ?>
+
     </ul>
   </body>
 </html>
