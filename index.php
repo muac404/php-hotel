@@ -61,7 +61,7 @@ $hotels = [
     <header>
     
       <img class="header-img text-center" src="https://loghi-famosi.com/wp-content/uploads/2021/08/Booking.com-Logo.png" alt="logo">
-      <h1 class="text-center mt-5">RIVIERA HOTELS</h1>
+      
     </header>
 
     <div class="container">
@@ -73,7 +73,7 @@ $hotels = [
               $hotels[$i]["parking"] = "No";;
             }?>
           <li class="m-5 p-3">
-            <h2> <?php echo $hotels[$i]["name"] ?></h2>
+            <h2 class="text-bg-dark p-3"> <?php echo $hotels[$i]["name"] ?></h2>
             <h4><?php echo $hotels[$i]["description"] ?></h4>
             <h4>With Parking: <?php echo $hotels[$i]["parking"] ?></h4>
             <h2>Vote: <?php echo $hotels[$i]["vote"] ?></h2>
